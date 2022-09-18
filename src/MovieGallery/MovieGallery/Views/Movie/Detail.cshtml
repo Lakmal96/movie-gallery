@@ -1,42 +1,28 @@
 ﻿@{
-    Layout = null;
-
-    var movieName = "Zack Snyder's Justice League";
-    var director = "Zack Snyder";
-    var description = "<p><b>Bruce Wayne</b> and <b>Diana Prince</b> try to bring the meta humans of Earth together after the death of <b>Clark Kent</b>. Meanwhile, <b>Darkseid</b> sends <b>Steppenwolf</b> to Earth with a vast army to subjugate humans.</p>";
-    var cast = new string[]
-    {
-        "Henry Cavill", "Ben Afflec", "Gal Gadot", "Jason Mamoa", "Ezra Miller"
-    };
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "Movie Details";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        <h1>@movieName</h1>
-        <h2>by @director</h2>
+
+<div>
+    <h1>@ViewBag.MovieName</h1>
+    <h2>by @ViewBag.Director</h2>
         
-        <h3>Description: </h3>
-        <div>@Html.Raw(description)</div>
+    <h3>Description: </h3>
+    <div>@Html.Raw(ViewBag.Description)</div>
 
-        <div>
-            @if (cast.Length > 0)
-            {
-                <h3>Cast: </h3>
-                <ul>
-                    @foreach (var c in cast)
-                    {
-                        <li>@c</li>
-                    }
-                </ul>
-            }
-        </div>
+    <div>
+        @if (ViewBag.Cast.Length > 0)
+        {
+            <h3>Cast: </h3>
+            <ul>
+                @foreach (var c in ViewBag.Cast)
+                {
+                    <li>@c</li>
+                }
+            </ul>
+        }
     </div>
-</body>
-</html>
+</div>
+
