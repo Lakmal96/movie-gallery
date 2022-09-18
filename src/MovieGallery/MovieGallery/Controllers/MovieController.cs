@@ -8,9 +8,9 @@ namespace MovieGallery.Controllers
 {
     public class MovieController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from movie gallery!";
+            return View();
         }
     }
 }
