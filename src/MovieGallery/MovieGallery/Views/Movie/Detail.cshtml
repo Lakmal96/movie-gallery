@@ -5,26 +5,33 @@
     ViewBag.Title = @Model.DisplayText;
 }
 
+<h1>@Model.MovieName</h1>
 
-
-<div>
-    <h1>@Model.MovieName</h1>
-    <h2>by @Model.Director</h2>
-        
-    <h3>Description: </h3>
-    <div>@Model.Description</div>
-
-    <div>
-        @if (Model.Cast.Length > 0)
-        {
-            <h3>Cast: </h3>
-            <ul>
-                @foreach (var c in Model.Cast)
-                {
-                    <li><b>@c.ArtistName</b> : @c.Role</li>
-                }
-            </ul>
-        }
+<div class="row">
+    <div class="col-md-6">
+        <div class="jumbotron">
+            <h6><b>Movie:</b> @Model.MovieName</h6>
+            <h6><b>Director:</b> @Model.Director</h6>
+            <h6><b>Favorite:</b> @(Model.Favorite ? "Yes" : "No")</h6>
+            @if (Model.Cast.Length > 0)
+            {
+                <h6><b>Cast: </b></h6>
+                <ul>
+                    @foreach (var c in Model.Cast)
+                    {
+                        <li><b>@c.ArtistName</b> : @c.Role</li>
+                    }
+                </ul>
+            }
+        </div>
+        <h6><b>Description: </b></h6>
+        <div>@Model.Description</div>
+    </div>
+    <div class="col-md-6">
+        <img src="/Images/@Model.MoviePoster" class="img-fluid" alt="@Model.MoviePoster"/>
     </div>
 </div>
+
+
+
 

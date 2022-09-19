@@ -98,9 +98,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Images\tb.jpg" />
-    <Content Include="Images\tgm.jpg" />
-    <Content Include="Images\zsjl.jpg" />
+    <Content Include="Images\the-batman.jpg" />
+    <Content Include="Images\top-gun-mevrick.jpg" />
+    <Content Include="Images\zack-snyder%27s-justice-league.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
